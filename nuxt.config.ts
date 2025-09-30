@@ -17,5 +17,14 @@ export default defineNuxtConfig({
       },
     },
   },
+  nitro: {
+    static: true,
+    compressPublicAssets: true,
+  },
+  vite: {
+    build: {
+      minify: 'terser',
+    },
+  },
   devtools: { enabled: false },
 });
