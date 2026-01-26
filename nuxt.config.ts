@@ -27,4 +27,21 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: false },
+  modules: [
+    '@nuxtjs/i18n'
+  ],
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json' },
+      { code: 'fr', iso: 'fr-FR', file: 'fr.json' }
+    ],
+    langDir: './',
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
+  }
 });
